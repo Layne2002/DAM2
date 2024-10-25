@@ -1,0 +1,11 @@
+123-adb,toyota,Prius,Coche,
+333-dfg,seat,leon,Coche,
+123-234,motorolla,x233,moto,
+123-asd,hyundai,tiburon,Coche,
+123-adb,toyota,Prius,Coche,
+ejemplo,Ford,Mustang,Coche,
+agg-444,tesla,model s,coche
+123132-asdad,ducatti,kawasaki,MOTO
+aaa,xcv,sddd,COCHE
+asdf,asd,32444,COCHE
+asaadsdas2121,dddd,adsddd,COCHE
