@@ -5,7 +5,7 @@ interface Alumno {
   expedientes: Expediente[];
 }
 
-interface Expediente {
+export interface Expediente {
   curso: string;
   media: number;
 }
