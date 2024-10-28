@@ -1,5 +1,5 @@
 import './style.css'
-import './topics/t9modulo-alumnos.ts';
+import './topics/08-clases.ts';
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   Hola Mundo!
 `
