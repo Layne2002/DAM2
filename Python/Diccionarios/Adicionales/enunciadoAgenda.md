@@ -4,7 +4,7 @@ Crea un programa que utilice un diccionario para crear un listín telefónico. E
 diccionario estará formado por pares (nombre, teléfono).
 
 1. Al arrancar debe mostrar un menú de opciones como el siguiente:
-
+```
 MENÚ DE OPCIONES
 a) Listado de teléfonos, usando el orden por defecto.
 b) Listado de teléfonos por orden alfabético.
@@ -14,7 +14,7 @@ e) Buscar un número de teléfono.
 f) Eliminar un contacto.
 g) Borrar el listín telefónico.
 h) Salir
-
+```
 2. El usuario introducirá la opción que debe ejecutar. Para ello, introducirá una letra
     (ya sea minúscula o mayúscula) de la operación a realizar. En caso de introducir
     una letra incorrecta se mostrará un mensaje de error.
