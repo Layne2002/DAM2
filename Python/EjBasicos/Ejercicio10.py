@@ -1,5 +1,3 @@
-"""10.Escribe un programa que recoja la edad del usuario y muestre la edad que
-tendrá dentro de 5, 10 y 15 años."""
 edad=int(input("Dime tu edad:\n"))
 if(edad<0):
     print("tu edad no puede ser negativa")

@@ -1,7 +1,3 @@
-"""2. Escribe un programa que recoja dos números enteros por teclado y muestre
-los siguientes resultados: suma, resta, multiplicación, división real, división
-entera, resto de la división entera y potencia."""
-
 x = int(input("Introduce el primer número: "))
 y = int(input("Introduce el segundo número: "))
 
