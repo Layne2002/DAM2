@@ -1,18 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios con Diccionarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 
-</head>
-<body>
 
     <h1>Ejercicios con Diccionarios Adicionales</h1>
-    
+
     <h2>1. Información del Usuario</h2>
     <p>
-        Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. 
+        Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario.
         Después debe mostrar por pantalla el mensaje:
     </p>
     <pre>
@@ -26,7 +36,7 @@
 
     <h2>3. Análisis de Ventas de "El Gran Bazar"</h2>
     <p>
-        La tienda "El Gran Bazar" desea analizar sus ventas diarias y mensuales. 
+        La tienda "El Gran Bazar" desea analizar sus ventas diarias y mensuales.
         Tienes un diccionario que contiene las ventas de cada producto para cada día del mes.
         Cada producto tiene registrado cuántas unidades se vendieron en cada día del mes.
     </p>
@@ -39,10 +49,10 @@
         <li>Ventas diarias del producto con mayor venta mensual.</li>
         <li>Día con mayor cantidad de ventas para cada producto.</li>
     </ol>
-    
+
     <h3>Datos de Ejemplo</h3>
     <p>
-        Supón que tienes las ventas de cuatro productos (A, B, C, D) durante cinco días. 
+        Supón que tienes las ventas de cuatro productos (A, B, C, D) durante cinco días.
         El formato del diccionario de ventas es el siguiente:
     </p>
     <pre>
@@ -54,10 +64,10 @@
         }
     </pre>
     <p>
-        En este diccionario, las claves principales son los productos y cada clave de producto tiene un diccionario 
+        En este diccionario, las claves principales son los productos y cada clave de producto tiene un diccionario
         anidado donde las claves son los días y los valores son las unidades vendidas.
     </p>
-    
+
     <h2>Objetivo del Ejercicio</h2>
     <p>
         Escribe un programa que:
@@ -68,7 +78,3 @@
         <li>Muestre las ventas diarias del producto más vendido.</li>
         <li>Encuentre el día con la mayor venta para cada producto.</li>
     </ol>
-
-</body>
-</html>
-
