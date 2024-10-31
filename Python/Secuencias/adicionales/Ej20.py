@@ -1,6 +1,3 @@
-"""20.Diseña una función que, dada una lista de números, devuelva una lista con todos los
-pares de números que podemos formar con uno de la primera lista y otro de la segunda. Por
-ejemplo, si se suministran las listas 1 3 5 y 2 5 , la lista resultante es 1 2 1 5 3 2 3 5 5 2 5 5 ."""
 from typing import List
 
 

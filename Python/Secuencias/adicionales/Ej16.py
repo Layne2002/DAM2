@@ -1,7 +1,3 @@
-"""16.Diseña una función que reciba dos listas y devuelva los elementos que pertenecen a
-la primera pero no a la segunda, sin repetir ninguno (diferencia de conjuntos).
-Ejemplo: si recibe las listas 1 2 1 y 2 3 2 4 , devolverá la lista 1 .
-"""
 from typing import List
 
 

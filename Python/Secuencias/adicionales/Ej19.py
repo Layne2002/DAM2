@@ -1,5 +1,3 @@
-"""19.Diseña una función que, dada una lista de números, devuelva otra lista con solo
-aquellos números de la primera que son primos."""
 from typing import List
 
 

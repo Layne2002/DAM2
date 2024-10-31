@@ -1,8 +1,3 @@
-"""3. Escribe un programa que recoja números por teclado hasta que se introduzca
-el valor cero. A continuación, debe mostrar el número de valores introducidos,
-el valor mínimo introducido, el máximo, la suma de todos ellos y su media
-aritmética (todos los cálculos sin contar el cero)"""
-
 contador = 0
 suma = 0
 x = int(input("Introduce numeros o un 0 para parar\n"))

@@ -1,4 +1,3 @@
-"""8. Escribe un programa que recoja un número y calcule si es primo."""
 x = int(input("Dime un número y te diré si es primo\n"))
 
 primo = True

@@ -1,7 +1,3 @@
-"""2. Definir una función que, al recibir una cadena de texto, cuente cuántas palabras hay y
-devuelva dicho valor."""
-
-
 def contarPalabras(cadena) -> int:
     cadena = cadena.split(" ")
     return len(cadena)

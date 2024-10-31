@@ -1,5 +1,3 @@
-"""18.Diseña una función que, dada una lista de nombres y una letra, devuelva una lista
-con todos los nombres que empiezan por dicha letra."""
 from typing import List
 
 

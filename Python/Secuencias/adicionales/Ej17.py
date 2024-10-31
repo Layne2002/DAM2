@@ -1,5 +1,3 @@
-"""17. Diseña una función que, dada una lista de números, devuelva otra lista que solo
-incluya sus números impares."""
 from typing import List
 
 

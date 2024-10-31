@@ -1,5 +1,3 @@
-"""3. Escribe un programa que lea tres números y que muestre los números mayor
-y menor."""
 a = int(input("Introduce el primer numero\n"))
 b = int(input("Ahora el segundo\n"))
 c = int(input("Y el tercero:\n"))

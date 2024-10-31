@@ -1,7 +1,3 @@
-"""1. Definir una función que, al recibir una cadena de texto, cuente cuántas vocales hay y
-devuelva dicho valor."""
-
-
 def contarVocales(cadena) -> int:
     cadena = cadena.lower()
     contador = 0

@@ -1,6 +1,3 @@
-"""21.Diseña una función que, dada una lista de números, devuelva una lista con todos los
-pares de números amigos que podemos formar con uno de la primera lista y otro de la
-segunda."""
 from typing import List
 
 

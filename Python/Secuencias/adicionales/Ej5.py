@@ -1,8 +1,3 @@
-# 5. Definir la función
-# rango : (List[int]) -> List[int]
-# tal que rango(xs) es la lista formada por el menor y mayor elemento
-# de xs.
-# rango([3, 2, 7, 5]) == [2, 7]
 from typing import List
 
 
