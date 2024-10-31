@@ -1,5 +1,6 @@
 # El enunciado está en enunciado.md
 def mostrar_menu():
+    print("-----------------------------------------------------")
     print("MENÚ DE OPCIONES")
     print("a) Listado de teléfonos, usando el orden por defecto.")
     print("b) Listado de teléfonos por orden alfabético.")
@@ -16,15 +17,19 @@ def main():
     while True:
         mostrar_menu()
         opcion = input("Selecciona una opción: ").lower()
-
+        print("-----------------------------------------------------")
         match opcion:
             case 'a':
-                print("Listado de teléfonos, usando el orden por defecto:")
-                for nombre, telefono in agenda.items():
-                    print(f"{nombre}- {telefono}")
+                if agenda == {}:
+                    print("La agenda está vaía!")
+                else:
+                    print("Listado de teléfonos, usando el orden por defecto:")
+                    for nombre, telefono in agenda.items():
+                        print(f"{nombre}- {telefono}")
+
             case 'b':
                 print("Listado de teléfonos, usando el orden por defecto:")
-                for nombre, telefono in sorted(agenda.keys()):
+                for nombre, telefono in sorted(agenda.items()):
                     print(f"{nombre}- {telefono}")
             case 'c':
                 nombre = input("Introduce el nombre del contacto: ")
@@ -36,7 +41,7 @@ def main():
                     else:
                         telefono = input("Introduce el número de teléfono: ")
                         agenda[nombre] = telefono
-                        print(f"Contacto '{nombre}' añadido.")
+                        print(f"Contacto '{nombre}' actualizado.")
                         input("Dale a Enter para continuar...")
                         continue
                 else:
@@ -45,19 +50,18 @@ def main():
                     print(f"Contacto '{nombre}' añadido.")
             case 'd':
                 nombre = input("Introduce el nombre del contacto: ")
+                telefono = input("Introduce el número de teléfono: ")
                 if nombre not in agenda:
                     actualizar = int(input(
                         f"{nombre} no existe en su agenda. Desea añadirlo? (1-SI 0-NO)\n"))
                     if actualizar == 0:
                         print("Contacto no añadido.")
                     else:
-                        telefono = input("Introduce el número de teléfono: ")
                         agenda[nombre] = telefono
                         print(f"Contacto '{nombre}' añadido.")
                         input("Dale a Enter para continuar...")
                         continue
                 else:
-                    telefono = input("Introduce el número de teléfono nuevo: ")
                     agenda[nombre] = telefono
                     print(f"Contacto '{nombre}' actualizado.")
             case 'e':
@@ -70,15 +74,16 @@ def main():
                 if encontrado == False:
                     print(f"No se encuentra el teléfono {telf}")
             case 'f':
-                nombre = input("Dime el nombre que quieres borrar:\n")
+                nombreBusca = input("Dime el nombre que quieres borrar:\n")
                 encontrado = False
-                for i in agenda:
-                    if nombre == i:
+                for nombre in agenda:
+                    if nombre == nombreBusca:
                         encontrado = True
-                        agenda.pop(i)
-                        print(f"Se ha borrado a {nombre}.")
                 if encontrado == False:
-                    print(f"No se encuentra a {nombre} en la agenda.")
+                    print(f"No se encuentra a {nombreBusca} en la agenda.")
+                else:
+                    agenda.pop(nombreBusca)
+                    print(f"Se ha borrado a {nombre}.")
             case 'g':
                 seguro = int(
                     input("Estás seguro de que quieres borrar toda la agenda? (1-SI 0-NO)"))
@@ -92,6 +97,7 @@ def main():
                 break
             case _:
                 print("Opción no válida. Inténtalo de nuevo.")
+        print("-----------------------------------------------------")
         input("Dale a Enter para continuar...")
 
 
