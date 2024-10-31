@@ -1,5 +1,5 @@
 <h1>Ejercicios con diccionarios adicionales</h1>
-1. Escribir un programa que pregunte al usuario su nombre, edad,
+<p>1. Escribir un programa que pregunte al usuario su nombre, edad,
 dirección y teléfono y lo guarde en un diccionario. Después debe
 mostrar por pantalla el mensaje <nombre> tiene <edad> años,
 vive en <dirección> y su número de teléfono es
@@ -32,3 +32,4 @@ Escribe un programa que:
 2. Identifique el producto con más y menos ventas en el mes.
 3. Muestre las ventas diarias del producto más vendido.
 4. Encuentre el día con la mayor venta para cada producto.
+</p>
