@@ -5,12 +5,6 @@ export class Persona {
     private edad: number,
     private localidad: string,
     private sexo?: string
-  ) {
-    this.nombre = nombre;
-    this.apellidos = apellidos;
-    this.edad = edad;
-    this.localidad = localidad;
-    this.sexo = sexo;
-  }
+  ) {}
 }
 export {};

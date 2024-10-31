@@ -11,9 +11,6 @@ export class Profesor extends Persona {
     private departamento: string
   ) {
     super(nombre, apellidos, edad, localidad, sexo);
-    this.centro = centro;
-    this.especialidad = especialidad;
-    this.departamento = departamento;
   }
 }
 export {};
