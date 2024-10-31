@@ -1,3 +1,4 @@
+
 # Ejercicios con diccionarios adicionales
 
 1. Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. Después debe mostrar por pantalla el mensaje:
@@ -48,3 +49,5 @@ Escribe un programa que:
 3. Muestre las ventas diarias del producto más vendido.
 
 4. Encuentre el día con la mayor venta para cada producto
+
+
