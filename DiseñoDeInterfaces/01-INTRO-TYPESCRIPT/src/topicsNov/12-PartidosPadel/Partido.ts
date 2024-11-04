@@ -5,14 +5,14 @@ interface Set {
 }
 export class Partido {
   constructor(
-    public equipoLocal: Equipo,
-    public equipoVisitante: Equipo,
     public fecha: string,
     public hora: string,
     public recinto: string,
     public pista: number,
     public arbitro: Arbitro,
-    public sets: Array<Set>
+    public sets: Array<Set>,
+    public equipoLocal?: Equipo,
+    public equipoVisitante?: Equipo
   ) {}
   determinarGanador(): string {
     // contadores de victorias de cada equipo
@@ -28,13 +28,32 @@ export class Partido {
         setsVisitante++;
       }
     }
-
-    if (setsLocal > setsVisitante) {
-      return `El equipo ${this.equipoLocal.nombre} ha ganado al equipo ${this.equipoVisitante.nombre} por ${setsLocal} sets a ${setsVisitante}.`;
-    } else if (setsLocal < setsVisitante) {
-      return `El equipo ${this.equipoVisitante.nombre} ha ganado al equipo ${this.equipoLocal.nombre} por ${setsVisitante} sets a ${setsLocal}.`;
+    if (this.equipoLocal != null && this.equipoVisitante != null) {
+      if (setsLocal > setsVisitante) {
+        return `El equipo ${this.equipoLocal.nombre} ha ganado al equipo ${this.equipoVisitante.nombre} por ${setsLocal} sets a ${setsVisitante}.`;
+      } else if (setsLocal < setsVisitante) {
+        return `El equipo ${this.equipoVisitante.nombre} ha ganado al equipo ${this.equipoLocal.nombre} por ${setsVisitante} sets a ${setsLocal}.`;
+      } else {
+        return `El equipo ${this.equipoVisitante.nombre} y el equipo ${this.equipoLocal.nombre} han empatado ${setsVisitante} sets a ${setsLocal}.`;
+      }
     } else {
-      return `El equipo ${this.equipoVisitante.nombre} y el equipo ${this.equipoLocal.nombre} han empatado ${setsVisitante} sets a ${setsLocal}.`;
+      return `No hay equipo ganador.`;
     }
   }
+}
+export function imprimirCalendario(calendario: Partido[]): void {
+  calendario.forEach((partido) => {
+    const emparejamiento = `${
+      partido.equipoLocal?.nombre || "Equipo Local Desconocido"
+    } vs ${partido.equipoVisitante?.nombre || "Equipo Visitante Desconocido"}`;
+    const fecha = partido.fecha;
+    const arbitro = partido.arbitro.nombre;
+    const direccionArbitro =
+      partido.arbitro?.direccion || "Dirección de árbitro Desconocida";
+    console.log(`Partido: ${emparejamiento}`);
+    console.log(`Fecha: ${fecha}`);
+    console.log(`Árbitro: ${arbitro}`);
+    console.log(`Dirección del Árbitro: ${direccionArbitro}`);
+    console.log("---------------------------");
+  });
 }

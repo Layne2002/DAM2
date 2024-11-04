@@ -4,7 +4,7 @@ export class Persona {
     public apellidos: string,
     public genero: string,
     public telefono: string,
-    public direccion: Direccion
+    public direccion?: Direccion
   ) {}
 }
 export interface Direccion {

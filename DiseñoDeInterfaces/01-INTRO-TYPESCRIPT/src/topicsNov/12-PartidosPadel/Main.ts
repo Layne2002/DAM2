@@ -1,6 +1,6 @@
 import { Arbitro } from "./Arbitro.ts";
 import { Equipo } from "./Equipo.ts";
-import { Partido } from "./Partido.ts";
+import { Partido,imprimirCalendario } from "./Partido.ts";
 
 // Creamos 3 equipos
 export const equipo1: Equipo = {
@@ -109,60 +109,60 @@ const arbitro1: Arbitro = {
   apellidos: "Kurt Schrute",
   genero: "Masculino",
   telefono: "5566-4677",
+  colegiado: 7,
   direccion: {
     calle: "Rural Rt. 6, 'Schrute Farms'",
     CP: 18431,
     localidad: "Scranton",
     provincia: "Pennsylvania",
-  },
-  colegiado: 7,
+  }
 };
 const arbitro2: Arbitro = {
   nombre: "Michael",
   apellidos: "Scott",
   genero: "Masculino",
   telefono: "5576-7759",
+  colegiado: 69,
   direccion: {
     calle: "126 Kellum Court",
     CP: 18510,
     localidad: "Scranton",
     provincia: "Pennsylvania",
-  },
-  colegiado: 69,
+  }
 };
 
 // Ahora, creamos un calendario con 3 partidos
 export const calendario: Partido[] = [
   new Partido( // partido 1
-    equipo1,
-    equipo2,
     "10/3/2024",
     "18:00",
     "Padel Family",
     3,
     arbitro1,
-    [{ juegos: [2, 4] }, { juegos: [3, 1] }, { juegos: [2, 0] }]
+    [{ juegos: [2, 4] }, { juegos: [3, 1] }, { juegos: [2, 0] }],
+    equipo1,
+    equipo2
   ),
   new Partido( // partido 2
-    equipo2,
-    equipo3,
     "06/7/2024",
     "15:30",
     "Padel Sports Resort",
     4,
     arbitro2,
-    [{ juegos: [1, 6] }, { juegos: [0, 4] }, { juegos: [0, 3] }]
+    [{ juegos: [1, 6] }, { juegos: [0, 4] }, { juegos: [0, 3] }],
+    equipo2,
+    equipo3
   ),
   new Partido( // Partido 3
-    equipo1,
-    equipo3,
     "19/9/2024",
     "12:00",
     "Pistas Padel Paco",
     1,
     arbitro2,
-    [{ juegos: [3, 2] }, { juegos: [1, 3] }]
+    [{ juegos: [3, 2] }, { juegos: [1, 3] }],
+    equipo1,
+    equipo3
   ),
 ];
 
-
+imprimirCalendario(calendario);

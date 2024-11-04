@@ -6,8 +6,8 @@ export class Arbitro extends Persona {
     apellidos: string,
     genero: string,
     telefono: string,
-    direccion: Direccion,
-    public colegiado: number
+    public colegiado: number,
+    direccion?: Direccion
   ) {
     super(nombre, apellidos, genero, telefono, direccion);
   }
