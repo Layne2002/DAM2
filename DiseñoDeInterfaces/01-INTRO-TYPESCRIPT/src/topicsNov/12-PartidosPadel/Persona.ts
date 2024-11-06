@@ -4,6 +4,7 @@ export class Persona {
     public apellidos: string,
     public genero: string,
     public telefono: string,
+    // agregado un ? para que sea opcional la direccion
     public direccion?: Direccion
   ) {}
 }

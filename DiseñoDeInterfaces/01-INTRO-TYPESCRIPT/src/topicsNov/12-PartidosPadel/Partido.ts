@@ -30,11 +30,14 @@ export class Partido {
     }
     if (this.equipoLocal != null && this.equipoVisitante != null) {
       if (setsLocal > setsVisitante) {
-        return `El equipo ${this.equipoLocal.nombre} ha ganado al equipo ${this.equipoVisitante.nombre} por ${setsLocal} sets a ${setsVisitante}.`;
+        return `El equipo ${this.equipoLocal.nombre} ha ganado al equipo ${this.equipoVisitante.nombre}
+        por ${setsLocal} sets a ${setsVisitante}.`;
       } else if (setsLocal < setsVisitante) {
-        return `El equipo ${this.equipoVisitante.nombre} ha ganado al equipo ${this.equipoLocal.nombre} por ${setsVisitante} sets a ${setsLocal}.`;
+        return `El equipo ${this.equipoVisitante.nombre} ha ganado al equipo ${this.equipoLocal.nombre} 
+        por ${setsVisitante} sets a ${setsLocal}.`;
       } else {
-        return `El equipo ${this.equipoVisitante.nombre} y el equipo ${this.equipoLocal.nombre} han empatado ${setsVisitante} sets a ${setsLocal}.`;
+        return `El equipo ${this.equipoVisitante.nombre} y el equipo ${this.equipoLocal.nombre}
+         han empatado ${setsVisitante} sets a ${setsLocal}.`;
       }
     } else {
       return `No hay equipo ganador.`;
@@ -44,16 +47,21 @@ export class Partido {
 export function imprimirCalendario(calendario: Partido[]): void {
   calendario.forEach((partido) => {
     const emparejamiento = `${
-      partido.equipoLocal?.nombre || "Equipo Local Desconocido"
-    } vs ${partido.equipoVisitante?.nombre || "Equipo Visitante Desconocido"}`;
+      partido.equipoLocal?.nombre || "Sin Equipo Local"
+    } vs ${partido.equipoVisitante?.nombre || "Sin Equipo Visitante"}`;
     const fecha = partido.fecha;
     const arbitro = partido.arbitro.nombre;
-    const direccionArbitro =
-      partido.arbitro?.direccion || "Dirección de árbitro Desconocida";
+
+    // desestructuración de la direccion
+    const direccionArbitro = partido.arbitro?.direccion
+      ? `${partido.arbitro.direccion.calle}, ${partido.arbitro.direccion.CP}, 
+      ${partido.arbitro.direccion.localidad}, ${partido.arbitro.direccion.provincia}`
+      : "Dirección de árbitro Desconocida";
+
     console.log(`Partido: ${emparejamiento}`);
     console.log(`Fecha: ${fecha}`);
     console.log(`Árbitro: ${arbitro}`);
     console.log(`Dirección del Árbitro: ${direccionArbitro}`);
-    console.log("---------------------------");
+    console.log("---------------------------------------------");
   });
 }
