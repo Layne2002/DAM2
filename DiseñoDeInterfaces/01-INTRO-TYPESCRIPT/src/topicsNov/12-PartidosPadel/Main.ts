@@ -1,6 +1,6 @@
 import { Arbitro } from "./Arbitro.ts";
 import { Equipo } from "./Equipo.ts";
-import { Partido,imprimirCalendario } from "./Partido.ts";
+import { Partido, imprimirCalendario } from "./Partido.ts";
 
 // Creamos 3 equipos
 export const equipo1: Equipo = {
@@ -12,13 +12,14 @@ export const equipo1: Equipo = {
       apellidos: "Zinnatullin",
       genero: "Masculino",
       telefono: "12345678",
+      categoria: 4,
       direccion: {
         calle: "Los Álamos",
         CP: 25435,
         localidad: "Málaga",
         provincia: "Málaga",
-      },
-      categoria: 4,
+      }
+
     },
     {
       // miembro 2
@@ -26,13 +27,13 @@ export const equipo1: Equipo = {
       apellidos: "Revuelta",
       genero: "Masculino",
       telefono: "55567894",
+      categoria: 3,
       direccion: {
         calle: "Los Arcos",
         CP: 25554,
         localidad: "Benalmádena",
         provincia: "Málaga",
-      },
-      categoria: 3,
+      }
     },
   ],
 };
@@ -45,13 +46,13 @@ export const equipo2: Equipo = {
       apellidos: "Chicote",
       genero: "Masculino",
       telefono: "987655412",
+      categoria: 1,
       direccion: {
         calle: "Pesadilla en la Cocina",
         CP: 27534,
         localidad: "Getafe",
         provincia: "Madrid",
-      },
-      categoria: 1,
+      }
     },
     {
       //miembro 2
@@ -59,13 +60,13 @@ export const equipo2: Equipo = {
       apellidos: "Ramsey",
       genero: "Masculino",
       telefono: "5555-2342",
+      categoria: 2,
       direccion: {
         calle: "Lamb Sauce St.",
         CP: 65467,
         localidad: "Springfield",
         provincia: "Ohio",
       },
-      categoria: 2,
     },
   ],
 };
@@ -78,13 +79,13 @@ export const equipo3: Equipo = {
       apellidos: "Heartwell White",
       genero: "Masculino",
       telefono: "5554-7656",
+      categoria: 6,
       direccion: {
         calle: "308, Negra Arroyo Lane",
         CP: 87104,
         localidad: "Albuquerque",
         provincia: "New Mexico",
-      },
-      categoria: 6,
+      }
     },
     {
       // miembro 2
@@ -92,13 +93,14 @@ export const equipo3: Equipo = {
       apellidos: "White",
       genero: "Femenino",
       telefono: "5554-1138",
+
+      categoria: 5,
       direccion: {
         calle: "308, Negra Arroyo Lane",
         CP: 87104,
         localidad: "Albuquerque",
         provincia: "New Mexico",
-      },
-      categoria: 5,
+      }
     },
   ],
 };
@@ -140,8 +142,6 @@ export const calendario: Partido[] = [
     3,
     arbitro1,
     [{ juegos: [2, 4] }, { juegos: [3, 1] }, { juegos: [2, 0] }],
-    equipo1,
-    equipo2
   ),
   new Partido( // partido 2
     "06/7/2024",
