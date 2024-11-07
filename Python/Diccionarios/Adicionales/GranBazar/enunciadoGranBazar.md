@@ -1,14 +1,13 @@
-
 # Ejercicios con diccionarios adicionales
 
-1. Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. Después debe mostrar por pantalla el mensaje:
-	 ```
-	 <nombre> tiene <edad> años,vive en <dirección> y
-	 su número de teléfono es <teléfono>.
-	```
-2. Modificar el programa anterior para que pueda manejar varios nombres.
+1 Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. Después debe mostrar por pantalla el mensaje:
 
-3. La tienda "El Gran Bazar" desea analizar sus ventas diarias y mensuales. Tienes un diccionario que contiene las ventas de cada producto para cada día del mes. Cada producto tiene registrado cuántas unidades se vendieron en cada día del mes.
+`<nombre> tiene <edad> años,vive en <dirección> y
+ su número de teléfono es <teléfono>.`
+
+2 Modificar el programa anterior para que pueda manejar varios nombres.
+
+3 La tienda "El Gran Bazar" desea analizar sus ventas diarias y mensuales. Tienes un diccionario que contiene las ventas de cada producto para cada día del mes. Cada producto tiene registrado cuántas unidades se vendieron en cada día del mes.
 
 Debes realizar un análisis que incluya:
 
@@ -20,7 +19,7 @@ Debes realizar un análisis que incluya:
 
 4. **Día con mayor cantidad de ventas** para cada producto.
 
-**Datos de ejemplo**
+## **Datos de ejemplo**
 
 Supón que tienes las ventas de cuatro productos (A, B, C, D) durante cinco días. El formato del diccionario de ventas es el siguiente:
 
@@ -49,5 +48,3 @@ Escribe un programa que:
 3. Muestre las ventas diarias del producto más vendido.
 
 4. Encuentre el día con la mayor venta para cada producto
-
-

@@ -3,8 +3,10 @@
 
 Usa funciones para escribir de forma sencilla un programa con las siguientes
 instrucciones:
-1. Al arrancar debe mostrar un menú de opciones como el siguiente:
-```
+
+1- Al arrancar debe mostrar un menú de opciones como el siguiente:
+
+```.Spanish
 MENÚ DE OPCIONES
 a) Mostrar un rombo.
 b) Adivinar un número.
@@ -15,16 +17,21 @@ f) Cálculo de un número de la sucesión de Fibonacci.
 g) Tabla de multiplicar.
 h) Salir
 ```
-2. El usuario introducirá la opción que debe ejecutar. Para ello, introducirá una letra (ya sea minúscula o mayúscula) de la operación a realizar. En caso de introducir una letra incorrecta se mostrará un mensaje de error.
-3. Si se ha indicado una opción correcta, se ejecuta según estas instrucciones que se indican a continuación. Una vez finalizada la opción se espera a que se pulse una tecla para continuar.
-4. Si la entrada de datos es numérica, hay que asegurarse de que el valor introducido es un número. Procura que el programa sea robusto. Es decir, que se controlen los errores en el programa.
 
-### _Las opciones del programa son_: 
+2- El usuario introducirá la opción que debe ejecutar. Para ello, introducirá una letra (ya sea minúscula o mayúscula) de la operación a realizar. En caso de introducir una letra incorrecta se mostrará un mensaje de error.
+
+3- Si se ha indicado una opción correcta, se ejecuta según estas instrucciones que se indican a continuación. Una vez finalizada la opción se espera a que se pulse una tecla para continuar.
+
+4- Si la entrada de datos es numérica, hay que asegurarse de que el valor introducido es un número. Procura que el programa sea robusto. Es decir, que se controlen los errores en el programa.
+
+## Opciones del programa
+
 **Mostrar un rombo**. Se debe recoger un número impar (debe asegurarse de que
 sea impar, en caso de no serlo debe descartarlo y pedirlo de nuevo). Una vez
 tenga el número impar debe mostrar un rombo de asteriscos. Por ejemplo, si se
 introduce el valor 7 se debe mostrar:
-```
+
+```.Python
 *
 ***
 *****
