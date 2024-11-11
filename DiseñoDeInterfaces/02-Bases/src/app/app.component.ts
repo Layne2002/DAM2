@@ -11,5 +11,5 @@ import { HeroeComponent } from "./heroes/heroe/heroe.component";
   imports: [ContadorComponent, HeroeComponent],
 })
 export class AppComponent {
-  public title: string = 'Mi primera app de Angular';
+  public title: string = 'Bomboclaat';
 }

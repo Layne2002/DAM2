@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-contador',
   template: `
-    <h3>Contador: {{ contador }}</h3>
+    <h2>Contador: {{ contador }}</h2>
     <button (click)="incrementarPor()">+ {{ intervalo }}</button>
     <button (click)="disminuirPor()">- {{ intervalo }}</button>
     <button (click)="reestablecerContador()">RESET</button>
