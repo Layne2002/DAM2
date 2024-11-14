@@ -1,0 +1,43 @@
+CREATE DATABASE transacciones;
+-- Tabla de Artículos
+CREATE TABLE articulos (
+    codart INTEGER PRIMARY KEY,
+    descripcion TEXT NOT NULL,
+    existencias INTEGER NOT NULL,
+    precio REAL NOT NULL
+);
+
+-- Tabla de Riders
+CREATE TABLE riders (
+    codigo INTEGER PRIMARY KEY,
+    nombre TEXT NOT NULL,
+    disponible BOOLEAN NOT NULL
+);
+
+-- Tabla de Pedidos
+CREATE TABLE pedidos (
+    codped INTEGER PRIMARY KEY,
+    fecha DATE NOT NULL,
+    codcli INTEGER NOT NULL,
+    direccion TEXT NOT NULL,
+    codart INTEGER NOT NULL,
+    cantidad INTEGER NOT NULL,
+    FOREIGN KEY (codart) REFERENCES articulos(codart)
+);
+
+-- Tabla de Envíos
+CREATE TABLE envios (
+    codped INTEGER PRIMARY KEY,
+    codrider INTEGER NOT NULL,
+    terminado DATETIME,
+    FOREIGN KEY (codped) REFERENCES pedidos(codped),
+    FOREIGN KEY (codrider) REFERENCES riders(codigo)
+);
+
+-- Insertar datos de prueba en Artículos
+INSERT INTO articulos (codart, descripcion, existencias, precio) VALUES (1, 'Bolígrafo', 100, 1.50);
+INSERT INTO articulos (codart, descripcion, existencias, precio) VALUES (2, 'Ratón', 200, 15.75);
+
+-- Insertar datos de prueba en Riders
+INSERT INTO riders (codigo, nombre, disponible) VALUES (1, 'Rider 1', 1);
+INSERT INTO riders (codigo, nombre, disponible) VALUES (2, 'Rider 2', 1);

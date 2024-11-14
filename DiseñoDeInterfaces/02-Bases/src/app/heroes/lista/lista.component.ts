@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './lista.component.css'
 })
 export class ListaComponent {
+  
   public nombreCentro: string = 'IES Playamar';
   public localidad: string = 'Torremolinos';
   public familiasType: number = 1;
