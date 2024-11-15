@@ -4,5 +4,6 @@
 /**
  * 
  */
-module transaccionesKarim {
+module TransaccionesKarim {
+	requires java.sql;
 }
