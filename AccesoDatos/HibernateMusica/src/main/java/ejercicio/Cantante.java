@@ -16,6 +16,10 @@ public class Cantante {
 		this.album = album;
 	}
 
+	public Cantante() {
+
+	}
+
 	@Column(name = "nombre_cantante", nullable = false)
 	private String nombreCantante;
 
