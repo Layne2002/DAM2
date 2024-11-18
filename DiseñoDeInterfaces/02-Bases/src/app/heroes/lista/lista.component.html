@@ -1,21 +1,18 @@
-<h2>Centro Educativo</h2>
-<dl>
-  <td>Centro educativo:</td>
-  <dd>{{ nombreCentro }}</dd>
+<h3>Lista de Héroes</h3>
 
-  <td>Localidad:</td>
-  <dd>{{ localidad }}</dd>
+<ul class="mt-2 list-group">
 
-  <td>Familias Profesionales:</td>
-  <dd>{{ familia }}</dd>
+  <li *ngFor="let nombre of nombresHeroes" class="list-group-item">
+    {{ nombre }}
+  </li>
+</ul>
+<div *ngIf="heroeEliminado; else NadaQueBorrar">
+  <h3>Heroe Eliminado: {{heroeEliminado}}</h3>
+</div>
+<ng-template #NadaQueBorrar>
+  <h3>No ha eliminado ningun heroe</h3>
+</ng-template>
 
-  <td>CENTRO:</td>
-  <dd>{{ nombreCapitalizado }}</dd>
-
-  <td>Logo:</td>
-  <dd>{{ getDescripcionHeroe() }}</dd>
-
-
-</dl>
-
-<button class="btn btn-primary">Cambiar datos</button>
+<button *ngIf="nombresHeroes.length>0" (click)="eliminaultimoHeroe()" class="btn btn-outline-danger">
+  Borrar heroe
+</button>

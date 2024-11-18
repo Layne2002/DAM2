@@ -1,32 +1,22 @@
 import { Component } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 @Component({
-  selector: 'app-heore-lista',
+  selector: 'app-lista',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './lista.component.html',
-  styleUrl: './lista.component.css'
+  styleUrl: './lista.component.css',
 })
 export class ListaComponent {
-  
-  public nombreCentro: string = 'IES Playamar';
-  public localidad: string = 'Torremolinos';
-  public familiasType: number = 1;
-
- public get familia():string{
-  switch(this.familiasType){
-    case 1:{
-      return ""
-    }
-  }
- }
-  public get nombreCapitalizado(): string {
-    return this.nombre.toLocaleUpperCase();
-  }
-  public getDescripcionHeroe(): string {
-    return `${this.nombre} - ${this.edad}`;
-  }
-  private getNombrePrivado(): string {
-    return 'Kakarot';
+  public nombresHeroes: string[] = [
+    'Goku',
+    'Piccolo',
+    'Vegeta',
+    'Gohan',
+    'Trunks',
+  ];
+  public heroeEliminado?: string;
+  public eliminaultimoHeroe():void{
+    this.heroeEliminado = this.nombresHeroes.pop();
   }
 }
