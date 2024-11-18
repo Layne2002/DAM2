@@ -1,0 +1,42 @@
+<div>
+  <h2>Gestión de Centros</h2>
+
+  <div *ngIf="centros.length > 0; else sinCentros">
+    <p><strong>Nombre:</strong> {{ centros[posicionActual].nombre }}</p>
+    <p><strong>Dirección:</strong> {{ centros[posicionActual].direccion }}</p>
+  </div>
+  <ng-template #sinCentros>
+    <p>No hay centros disponibles.</p>
+  </ng-template>
+
+  <div>
+    <button [disabled]="posicionActual === 0" (click)="retroceder()">
+      < ANTERIOR
+    </button>
+
+    <button [disabled]="pila.length === 0" (click)="insertar()">
+      O INSERTAR
+    </button>
+
+    <button
+      [disabled]="posicionActual === centros.length - 1"
+      (click)="avanzar()"
+    >
+      > POSTERIOR
+    </button>
+  </div>
+  <br />
+  <div style="margin-left: 10%">
+    <button (click)="eliminar()" [disabled]="centros.length === 0">
+      X ELIMINAR
+    </button>
+  </div>
+
+  <div>
+    <p>
+      <strong>Posición Actual:</strong> {{ posicionActual + 1 }} /
+      {{ centros.length }}
+    </p>
+    <p><strong>Centros en Pila:</strong> {{ pila.length }}</p>
+  </div>
+</div>
