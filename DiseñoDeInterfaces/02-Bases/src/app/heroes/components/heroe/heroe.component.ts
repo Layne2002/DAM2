@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-heroes-heroe',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './heroe.component.html',
   styleUrl: './heroe.component.css',
 })
@@ -19,7 +16,7 @@ export class HeroeComponent {
   private getNombrePrivado(): string {
     return 'Kakarot';
   }
-  public cambiarNombre(): void{
-    this.nombre = "Vegeta ";
+  public cambiarNombre(): void {
+    this.nombre = 'Vegeta ';
   }
 }

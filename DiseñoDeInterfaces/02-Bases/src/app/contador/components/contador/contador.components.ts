@@ -2,19 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contador',
-  template: `
-    <h2>Contador: {{ contador }}</h2>
-    <button (click)="incrementarPor()">+ {{ intervalo }}</button>
-    <button (click)="disminuirPor()">- {{ intervalo }}</button>
-    <button (click)="reestablecerContador()">RESET</button>
-    <br />
-    <br />
-    <button (click)="aumentarIntervalo()">Aumentar intervalo</button>
-    <button (click)="disminuirIntervalo()">Disminuir intervalo</button>
-    <button (click)="reestablecerIntervalo()">Reestablecer intervalo</button>
-    <hr />
-  `,
-  standalone: true,
+  templateUrl: './contador.component.html',
+  standalone: false,
 })
 export class ContadorComponent {
   public contador: number = 10;
