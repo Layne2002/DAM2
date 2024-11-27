@@ -12,7 +12,7 @@ class Persona:
         else:
             self._nombre = nombre
 
-    def getNombre(self):
+    def get_nombre(self):
         return self._nombre
 
     # Setter y getter para apellidos
@@ -22,7 +22,7 @@ class Persona:
         else:
             self._apellidos = apellidos
 
-    def getApellidos(self):
+    def get_apellidos(self):
         return self._apellidos
 
     # Setter y getter para direccion
@@ -32,7 +32,7 @@ class Persona:
         else:
             self._direccion = direccion
 
-    def getDireccion(self):
+    def get_direccion(self):
         return self._direccion
 
     # Setter y getter para DNI
@@ -41,6 +41,8 @@ class Persona:
             self._dni = dni.upper()
         else:
             self._dni = dni
+    def get_dni(self):
+        return self._dni
     
     #Setter y getter para edad
     def setEdad(self,edad):
@@ -49,7 +51,7 @@ class Persona:
         else:
             self._edad = 0
     
-    def getEdad(self):
+    def get_edad(self):
         return self._edad
     
     # Método mostrar
