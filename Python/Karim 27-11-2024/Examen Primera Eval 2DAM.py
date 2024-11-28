@@ -27,10 +27,13 @@ Revista: Incluye atributos adicionales como número de edición y mes de publica
 
 
 class Libro(Material):
+    def generarGenero(opcion):
+        generos = ["Ficción", "No Ficción", "Terror", "Ciencia"]
+        return generos[opcion-1]
 
     def __init__(self, id, titulo, autor, anyo, genero, paginas) -> None:
         super().__init__(id, titulo, autor, anyo)
-        self.genero = genero
+        self.genero = Libro.generarGenero(genero)
         # si el numero de paginasintroducido es 0 o menos, se asignará 1
         self.paginas = max(1, paginas)
 
@@ -41,9 +44,9 @@ class Libro(Material):
 
 class Revista(Material):
     def generarMes(opcion):
-        generos = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-                   "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-        return generos[opcion-1]
+        meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+                 "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+        return meses[opcion-1]
 
     def __init__(self, id, titulo, autor, anyo, edicion, mesPublicacion) -> None:
         super().__init__(id, titulo, autor, anyo)
@@ -53,7 +56,7 @@ class Revista(Material):
 
     def toString(self):
         cadena = super().toString()
-        return cadena+", Edición: "+str(self.edicion)+", Mes de publicación: "+self.mesPublicacion
+        return cadena+", Edición: "+str(self.edicion)+", Mes de publicación: "+str(self.mesPublicacion)
 
 
 '''3.Utiliza un diccionario para almacenar los materiales, donde la clave sea el id y el valor sea un objeto de tipo Libro o Revista.'''
@@ -124,32 +127,32 @@ def main():
         print("-----------------------------------------------------")
         match opcion:
             case 'a':
-                tipo = int(
-                    input("1- Agregar un libro 2- Agregar una revista..."))
-                if tipo == 1 or tipo == 2:
-                    id = int(input("Dime el id del material:\n"))
-                    if id not in IDs:
+                id = int(input("Dime el id del material:\n"))
+                if id not in IDs:
+                    tipo = int(
+                        input("1- Agregar un libro 2- Agregar una revista\n"))
+                    if tipo == 1 or tipo == 2:
                         titulo = input("Dime el título:\n")
                         autor = input("Dime su autor:\n")
-                        anyo = int(input("Dime el año de su publicacion..."))
+                        anyo = int(input("Dime el año de su publicacion\n"))
+                        posicion = len(materiales)+1
                         if tipo == 1:
-                            # de esta manera tendrémos automáticamente elegino uno de los 4 generos
-                            genero = input("Dime el genero:\n")
+                            genero = int(
+                                input("Dime el genero: 1-Ficción, 2-No Ficción, 3-Terror, 4-Ciencia\n"))
                             paginas = int(input("Dime el numero de páginas\n"))
-                            posicion = len(materiales)+1
-                            materiales[posicion] = Libro(id, titulo,autor, anyo, genero, paginas)
-                            
+                            materiales[posicion] = Libro(
+                                id, titulo, autor, anyo, genero, paginas)
                         else:
                             edicion = int(input("Dime el número de edición\n"))
-                            mes = Revista.generarMes(
-                                int(input("Dime el numero de mes:\n")))
-                            materiales[posicion]= Revista(id, titulo,autor, anyo, edicion, mes)
-                            
+                            mes = (int(input("Dime el numero de mes:\n")))
+                            materiales[posicion] = Revista(
+                                id, titulo, autor, anyo, edicion, mes)
                         IDs.append(id)
                     else:
-                        print("El ID "+id+" ya existe para otro material")
+                        print("debes eligir 1 o 2 (libro o revista)")
                 else:
-                    print("debes eligir 1 o 2 (libro o revista)")
+                    print("El ID "+str(id)+" ya existe para otro material")
+
             case 'b':
                 print("Listado de materiales:")
                 for id, material in materiales.items():
