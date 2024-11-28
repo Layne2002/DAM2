@@ -11,7 +11,7 @@ import { MainPageComponent } from './dbz/pages/main-page.component';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [MainPageComponent,CentrosComponent, HeroesModule, ContadorModule],
+  imports: [MainPageComponent, HeroesModule, ContadorModule],
 })
 export class AppComponent {
   public title: string = 'Bomboclaat';
