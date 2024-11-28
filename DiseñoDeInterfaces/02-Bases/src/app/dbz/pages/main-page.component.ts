@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { dbzListaComponent } from '../components/Lista/dbz-lista.component';
 import { AddPersonajeComponent } from '../components/AddPersonaje/dbz-addPersonaje.component';
 import { Personaje } from '../interfaces/personaje.interface';
+import { log } from 'node:console';
 @Component({
   selector: 'app-dbz-main-page',
   templateUrl: 'main-page.component.html',
@@ -23,4 +24,8 @@ export class MainPageComponent {
       fuerza: 2000,
     },
   ];
+  public onNewPersonaje(personaje:Personaje):void{
+    console.log("Main page")
+    console.log(personaje);
+  }
 }
