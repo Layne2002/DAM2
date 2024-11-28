@@ -6,16 +6,21 @@ import { Personaje } from '../interfaces/personaje.interface';
   selector: 'app-dbz-main-page',
   templateUrl: 'main-page.component.html',
   standalone: true,
-  imports:[dbzListaComponent,dbzAddPersonaje]
+  imports: [dbzListaComponent, dbzAddPersonaje],
 })
-
 export class MainPageComponent {
-public personajes: Personaje[]=[{
-  nombre: 'Krillin',
-  fuerza: 500
-},{
-  nombre: 'Goku',
-  fuerza:10000
-}
-];
+  public personajes: Personaje[] = [
+    {
+      nombre: 'Krillin',
+      fuerza: 500,
+    },
+    {
+      nombre: 'Goku',
+      fuerza: 10000,
+    },
+    {
+      nombre: 'Vegeta',
+      fuerza: 2000,
+    },
+  ];
 }

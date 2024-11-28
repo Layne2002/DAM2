@@ -6,8 +6,14 @@
       let i = index;
       let esPar = even;
       let esUltimo = last
+      let esPrimero = first
     "
     class="list-group-item"
+    [ngClass]="{
+    'list-group-item-primary':esPrimero,
+    'list-group-item-secondary':esPar,
+    'list-group-item-danger':esUltimo
+    }"
   >
     <span>{{ personaje.nombre }} -</span>
     <strong>Fuerza: </strong>
