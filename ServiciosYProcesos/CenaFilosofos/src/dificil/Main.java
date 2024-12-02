@@ -14,7 +14,7 @@ public class Main {
 		Filosofo[] filosofos = new Filosofo[5];
 		filosofos[0] = new Filosofo("Huao Piao", 0, 1, palillos);
 		filosofos[1] = new Filosofo("Bin Xilling", 1, 2, palillos);
-		filosofos[2] = new Filosofo("XinXue", 2, 3, palillos);
+		filosofos[2] = new Filosofo("Meido in chaina telcelo", 2, 3, palillos);
 		filosofos[3] = new Filosofo("中国哲学家", 3, 4, palillos);
 		filosofos[4] = new Filosofo("BAZAR ALIMENTACIÓN JIN HUE PAIO BAO", 4, 0, palillos);
 		for (Filosofo f : filosofos) {
