@@ -17,12 +17,14 @@ export class AddPersonajeComponent {
     fuerza: 0,
   };
   public addPersonaje(): void {
-    console.log("addPersonaje")
+    console.log('addPersonaje');
     console.log(this.personaje);
-    if(this.personaje.nombre.length==0) return;
+    if (this.personaje.nombre.length == 0) return;
     this.onNewPersonaje.emit(this.personaje);
     // Inicializamos valores
-    this.personaje.nombre = '';
-    this.personaje.fuerza = 0;
+    this.personaje = {
+      nombre: '',
+      fuerza: 0,
+    };
   }
 }

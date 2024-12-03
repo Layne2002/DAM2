@@ -12,6 +12,7 @@ class Cliente extends Thread {
 	@Override
 	public void run() {
 		try {
+			Thread.sleep(300);
 			while (true) {
 				tablero.retirarPizza(idRepartidor);
 				Thread.sleep((int) (Math.random() * 1000) + 500);

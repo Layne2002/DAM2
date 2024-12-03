@@ -24,8 +24,9 @@ export class MainPageComponent {
       fuerza: 2000,
     },
   ];
-  public onNewPersonaje(personaje:Personaje):void{
-    console.log("Main page")
-    console.log(personaje);
+  public onNewPersonaje(personaje: Personaje): void {
+    this.personajes.push(personaje);
   }
+  public onDeletePersonaje(personaje: Personaje): void {
+    this.personajes.at
 }

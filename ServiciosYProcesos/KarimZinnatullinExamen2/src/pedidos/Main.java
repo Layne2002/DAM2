@@ -8,12 +8,13 @@ public class Main {
 		Cola cola = new Cola();
 
 		Generador generador1 = new Generador(cola);
-		generador1.start();
+		
 		Generador generador2 = new Generador(cola);
-		generador2.start();
+		
 
 		Vaciador vaciador = new Vaciador(cola);
-
+		generador1.start();
+		generador2.start();
 		vaciador.start();
 
 		try {

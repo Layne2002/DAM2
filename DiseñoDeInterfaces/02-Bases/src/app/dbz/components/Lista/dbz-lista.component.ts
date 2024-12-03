@@ -13,4 +13,13 @@ export class dbzListaComponent {
     nombre: 'Trunks',
     fuerza:7000
   }];
+
+  public borrarPersonaje(): void {
+    this.onNewPersonaje.emit(this.personaje);
+    // Inicializamos valores
+    this.personaje = {
+      nombre: '',
+      fuerza: 0,
+    };
+  }
 }
