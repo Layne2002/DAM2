@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Personaje } from '../../interfaces/personaje.interface';
 @Component({
   selector: 'dbz-lista',
@@ -13,6 +13,8 @@ export class dbzListaComponent {
     nombre: 'Trunks',
     fuerza:7000
   }];
+
+
 
   public borrarPersonaje(): void {
     this.onNewPersonaje.emit(this.personaje);

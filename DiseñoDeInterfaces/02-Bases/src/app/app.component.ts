@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 import { ContadorModule } from './contador/components/contador/contador.module';
 import { HeroesModule } from './heroes/heroes.module';
