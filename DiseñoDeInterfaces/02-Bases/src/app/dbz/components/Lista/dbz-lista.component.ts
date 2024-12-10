@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, Input, Output,EventEmitter } from '@angular/core';
 import { Personaje } from '../../interfaces/personaje.interface';
 @Component({
   selector: 'dbz-lista',
@@ -16,12 +16,11 @@ export class dbzListaComponent {
 
 
 
-  public borrarPersonaje(): void {
-    this.onNewPersonaje.emit(this.personaje);
-    // Inicializamos valores
-    this.personaje = {
-      nombre: '',
-      fuerza: 0,
-    };
+  @Output()
+  public onDeletePersonaje: EventEmitter<number> = new EventEmitter();
+
+  public eliminarPersonaje (indice:number){
+    console.log(this.listaPersonajes[indice]);
+    this.onDeletePersonaje.emit(indice);
   }
 }

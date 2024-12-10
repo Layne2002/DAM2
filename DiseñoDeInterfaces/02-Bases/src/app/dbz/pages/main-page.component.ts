@@ -27,8 +27,8 @@ export class MainPageComponent {
   public onNewPersonaje(personaje: Personaje): void {
     this.personajes.push(personaje);
   }
-  public onDeletePersonaje(index: number): void {
-    this.personajes.splice(index, 1);
+  public deletePersonaje(indice: number): void {
+    this.personajes.splice(indice, 1);
   }
 
 }

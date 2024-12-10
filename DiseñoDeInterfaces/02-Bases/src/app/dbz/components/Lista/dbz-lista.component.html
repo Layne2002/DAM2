@@ -15,14 +15,14 @@
     'list-group-item-danger':esUltimo
     }"
   >
-  <div (ngSubmit)="borrarPersonaje()">
+  <div>
     <span>{{ personaje.nombre }} -</span>
     <strong>Fuerza: </strong>
     <span>{{ personaje.fuerza }}</span>
     <span>
       Índice:{{ i }} - Es par: {{ esPar }} - Es el último:{{ esUltimo }}
     </span>
-    </div>
-    <button type="submit"class="btn btn-danger">X</button>
+  </div>
+    <button class="btn btn-danger" (click)="eliminarPersonaje(i)">X</button>
   </li>
 </ul>
