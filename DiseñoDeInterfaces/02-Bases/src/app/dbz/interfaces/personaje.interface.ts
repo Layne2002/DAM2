@@ -1,4 +1,5 @@
 export interface Personaje{
-  nombre: string,
-  fuerza: number
+  id?: string;
+  nombre: string;
+  fuerza: number;
 }
