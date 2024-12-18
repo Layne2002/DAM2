@@ -1,0 +1,19 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Driver y URL de conexión -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tu_base_de_datos</property>
+
+        <!-- Credenciales -->
+        <property name="hibernate.connection.username">tu_usuario</property>
+        <property name="hibernate.connection.password">tu_contraseña</property>
+
+        <!-- Dialecto de Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Configuración adicional -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+    </session-factory>
+</hibernate-configuration>
