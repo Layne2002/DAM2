@@ -22,7 +22,7 @@ export class DbzService {
       fuerza: 2000,
     },
   ];
-  public onNewPersonaje(personaje: Personaje): void {
+  public addPersonaje(personaje: Personaje): void {
     const newPersonaje: Personaje = { id: uuid(), ...personaje };
 
     this.personajes.push(newPersonaje);
