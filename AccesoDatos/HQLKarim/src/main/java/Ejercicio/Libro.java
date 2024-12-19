@@ -15,8 +15,7 @@ public class Libro {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Column(name = "id", nullable = false)
-	private int idLibro;
+
 	@Column(name = "isbn", nullable = false)
 	private String isbn;
 	@Column(name = "titulo", nullable = false)
@@ -28,7 +27,7 @@ public class Libro {
 	private Autor autor;
 
 	public int getIdLibro() {
-		return idLibro;
+		return id;
 	}
 
 	public String getIsbn() {

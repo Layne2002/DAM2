@@ -17,8 +17,7 @@ public class Autor {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Column(name = "id", nullable = false)
-	private int id_autor;
+
 	@Column(name = "nombre", nullable = false)
 	private String nombre;
 	@Column(name = "pais", nullable = false)
@@ -28,7 +27,7 @@ public class Autor {
 	private List<Libro> libros;
 
 	public int getIdAutor() {
-		return id_autor;
+		return id;
 	}
 
 	public String getNombre() {
